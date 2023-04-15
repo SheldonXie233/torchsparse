@@ -38,9 +38,9 @@ void gather_cpu(const int n_k, const int n_in, const int c,
 void convolution_forward_cpu(at::Tensor in_feat, at::Tensor out_feat,
                              at::Tensor kernel, at::Tensor neighbor_map,
                              at::Tensor neighbor_offset, const bool transpose) {
-  if (in_feat.size(1) != kernel.size(1)) {
-    throw std::invalid_argument("Input feature size and kernel size mismatch");
-  }
+//   if (in_feat.size(1) != kernel.size(1)) {
+//     throw std::invalid_argument("Input feature size and kernel size mismatch");
+//   }
 
   int out_nrows = out_feat.size(0);
   out_feat.resize_({out_nrows, kernel.size(2)});
